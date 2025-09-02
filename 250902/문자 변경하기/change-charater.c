@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    a = 'C';
-    a = 'T';
+
+    char a = 'C';
+    char a = 'T';
     printf(a);
-    
+
     return 0;
 }
