@@ -3,8 +3,8 @@
 int main() {
 
     char a = 'C';
-    char a = 'T';
-    printf(a);
+    a = 'T';
+    printf("%c", a);
 
     return 0;
 }
