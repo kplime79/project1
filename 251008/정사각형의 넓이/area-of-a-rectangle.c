@@ -5,7 +5,7 @@ int main() {
     scanf("%d",&N);
     int area = N*N;
     printf("%d",area);
-    if (area<5)
+    if (N<5)
     {
         printf("tiny");
     }
