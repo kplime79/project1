@@ -32,6 +32,6 @@ int main() {
     }
     
     // 출력 형식에 맞춰 개행 문자 제거
-    printf("%d %d", max_val, min_val);
+    printf("%d %d\n", max_val, min_val);
     return 0;
 }
