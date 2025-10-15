@@ -1,37 +1,34 @@
 #include <stdio.h>
 
 int main() {
-    int max_val, min_val;
-    int a[5];
-    
-    // 입력은 그대로 5개를 받습니다.
-    for (int i=0; i<5; i++)
-    {
-        scanf("%d",&a[i]);
-    }
-    
-    max_val = a[0];
-    min_val = a[0];
-
-    for (int j=1; j<5; j++)
-    {
-        // **수정된 로직:** 종료 조건을 가장 먼저 검사합니다.
-        if (a[j] == 999 || a[j] == -999) {
-            break; 
-        }
-
-        // 종료 조건이 아니면 최대/최소값을 갱신합니다.
-        if (max_val < a[j]) // 더 클 때만 갱신 (효율 개선)
-        {
-            max_val = a[j];
-        }
-        if (min_val > a[j]) // 더 작을 때만 갱신 (효율 개선)
-        {
-            min_val = a[j];
-        }
-    }
-    
-    // 출력 형식에 맞춰 개행 문자 제거
+    // 배열을 구현합니다.
+	int arr[100];
+	
+	// 999나 -999가 주어지기 전까지 100개의 정수를 입력받습니다.
+	for(int i = 0; i < 100; i++) {
+		scanf("%d", &arr[i]);
+		if(arr[i] == 999 || arr[i] == -999)
+			break;
+	}
+	
+	int max_val = arr[0];
+	int min_val = arr[0];
+	
+	// 주어진 숫자들 중 최댓값과 최솟값을 구합니다.
+	for(int i = 1; i < 100; i++) {
+		if(arr[i] == 999 || arr[i] == -999)
+			break;
+		
+		if(arr[i] > max_val)
+			max_val = arr[i];
+		
+		if(arr[i] < min_val)
+			min_val = arr[i];
+	}
+	
+    // 최댓값과 최솟값을 출력합니다.
     printf("%d %d\n", max_val, min_val);
+
     return 0;
 }
+
